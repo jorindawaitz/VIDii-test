@@ -1,0 +1,300 @@
+/* CSS Document */
+*, *::after, *::before {
+  box-sizing:border-box;  
+}
+@font-face {
+  font-family: 'DisneyFont'; /*a name to be used later*/
+  src: url('../fonts/WaltDisneyFont.woff') format("woff"); 
+  
+}
+
+:root {
+--h1Kleur: rgb(53, 43, 43);
+--h2Kleur: rgb(53, 43, 43);
+--h3Kleur: rgb(36, 26, 13);
+--pKleur: black; 
+--mickeyGeel: rgb(249,215,11);
+--mickeyRood: rgb(242,5,5);
+--stuurWiel: rgb(204,153,51);
+}
+
+html, body {
+  height:100%;
+  margin:0;
+}
+
+button:not([disabled]) {
+  cursor:pointer;
+}
+
+/* jouw CSS vanaf hier */
+
+/* AchtergrondFoto */
+body {
+  background-image: url('../images/Shipdeck.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+/* Mickeymouse Through the years */
+h1 {
+  color: var(--h1Kleur);
+  /* padding-top: 2em;
+  padding-left: 2em; */
+  position: absolute;
+  top: 1.75em;
+  left: 15em;
+  font-family:'Times New Roman', Times, serif;
+  font-size: 1.875em;
+
+
+}
+
+
+/* Click to spin the wheel */
+h2 {
+  color:var(--h2Kleur);
+  position: absolute;
+  top: 4.2em;
+  left: 29em;
+  font-family:'Times New Roman', Times, serif;
+  font-size: 22px;
+}
+
+/* MickeyTitel */
+h3 {
+  color:var(--h3Kleur);
+  font-family: DisneyFont, fantasy; 
+  font-size: 22px;
+}
+
+/* MickeyTekst */
+p {
+  color: var(--pKleur);
+  font-family: DisneyFont, fantasy; 
+  font-size: 25px;
+}
+
+
+main {
+  position: relative;
+  /* display: flex;
+  justify-content: space-between; */
+}
+
+
+
+/* Button */
+button {
+  background: none;
+  border: none;
+  position: absolute;
+  top: 24em;
+  left: 18em;
+  cursor: pointer;
+
+  border-radius: 50%;
+  outline:none;
+}
+
+button:hover {
+  filter:drop-shadow(0 0 .5em rgb(253, 251, 202));
+}
+
+button:focus {
+  filter:drop-shadow(0 0 .5em rgb(255, 248, 181));
+}
+
+button:active {
+  filter:drop-shadow(0 0 .5em rgb(199, 159, 50));
+}
+
+/* StuurwielAfbeelding */
+button img {
+  height: 34em;
+  /* transform: rotateY(50deg); */
+}
+
+
+
+/* Mickey Afbeelding */
+main section img{
+  transform: scaleX(-1);
+  width: 18em;
+  position: absolute;
+  top: 18em;
+  left: 35.5em;
+}
+
+
+
+/* Informatie vak */
+
+main section:nth-child(3){
+  width:20em;
+  height:24.8em;
+  padding:1em 2em 2em 2em;
+  background-color: rgba(143, 119, 81, 1);
+  border-radius:5% 95% 19% 81% / 87% 0% 100% 13%;
+  box-shadow:
+  inset -.25em -.25em .25em rgb(46, 29, 0),
+  inset .25em .25em .25em rgb(20, 16, 10);
+  position: absolute;
+  right: 2.7em;
+  top: 15em;
+}
+
+
+
+/* Animatie Wiel draaien */
+
+@keyframes draaien {
+	0% {
+		transform:rotate(0turn);
+	}
+	100% {
+		transform:rotate(2.5turn);
+	}
+}
+
+img.draaien {
+	animation-name:draaien;
+	animation-duration:2s;
+	/* animation-iteration-count:infinite; */
+	animation-timing-function:ease-out;
+}
+
+/* mickeyBewegen */
+@keyframes springen {
+  0% {
+    transform:translatey(0) scale(-1, 1);
+    animation-timing-function:cubic-bezier(0.165, 0.840, 0.440, 1.000);
+  }
+
+  50% {
+    transform:translatey(-4em) scale(-1, 1);
+    animation-timing-function:cubic-bezier(0.895, 0.030, 0.685, 0.220);
+  }
+    
+  100% {
+    transform:translatey(0) scale(-1, 1);
+  }
+}
+
+section img.springen {
+  animation-name:springen;
+  animation-duration:0.75s;
+  animation-iteration-count:1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* EETSTE VERSIE */
+/* Zet de visuele nummering uit */
+/* ol, ul {
+  list-style-type: none;
+} */
+
+/* #mickey1 {
+    content: url('../images/mickey.1.png');
+    transform: scaleX(-1);
+    display: block;
+  }
+#tekst1 {
+  display: block;
+}
+
+#mickey2 {
+  content: url('../images/mickey.2.png');
+  transform: scaleX(-1);
+  display: none;
+}
+#tekst2 {
+  display: none;
+}
+
+#mickey3 {
+  content: url('../images/mickey.3.png');
+  transform: scaleX(-1);
+  display: none;
+}
+#tekst3 {
+  display: none;
+}
+#mickey4 {
+  content: url('../images/mickey.4.png');
+  transform: scaleX(-1);
+  display: none;
+}
+#tekst4 {
+  display: none;
+}
+#mickey5 {
+  content: url('../images/mickey.5.png');
+  transform: scaleX(-1);
+  display: none;
+}
+#tekst5 {
+  display: none;
+}
+#mickey6 {
+  content: url('../images/mickey.6.png');
+  transform: scaleX(-1);
+  display: none;
+}
+#tekst6 {
+  display: none;
+}
+#mickey7 {
+  content: url('../images/mickey.7.png');
+  transform: scaleX(-1);
+  display: none;
+}
+#tekst7 {
+  display: none;
+}
+#mickey8 {
+  content: url('../images/mickey.8.png');
+  transform: scaleX(-1);
+  display: none;
+}
+#tekst8 {
+  display: none;
+}
+#mickey9 {
+  content: url('../images/mickey.9.png');
+  transform: scaleX(-1);
+  display: none;
+}
+#tekst9 {
+  display: none;
+}
+#mickey10 {
+  content: url('../images/mickey.10.png');
+  transform: scaleX(-1);
+  display: none;
+}
+#tekst10 {
+  display: none;
+} */
