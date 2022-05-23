@@ -9,8 +9,8 @@
 }
 
 :root {
---h1Kleur: rgb(255, 255, 255);
---h2Kleur: rgb(255, 255, 255);
+--h1Kleur: rgb(53, 43, 43);
+--h2Kleur: rgb(53, 43, 43);
 --h3Kleur: rgb(36, 26, 13);
 --pKleur: black; 
 --mickeyGeel: rgb(249,215,11);
@@ -31,7 +31,7 @@ button:not([disabled]) {
 
 /* AchtergrondFoto */
 body {
-  background-image: url('../images/mickey_achtergrond-01.png');
+  background-image: url('../images/Shipdeck.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -46,7 +46,7 @@ h1 {
   top: 1.75em;
   left: 15em;
   font-family:'Times New Roman', Times, serif;
-  font-size: 30px;
+  font-size: 1.875em;
 
 
 }
@@ -93,6 +93,21 @@ button {
   top: 24em;
   left: 18em;
   cursor: pointer;
+
+  border-radius: 50%;
+  outline:none;
+}
+
+button:hover {
+  filter:drop-shadow(0 0 .5em rgb(253, 251, 202));
+}
+
+button:focus {
+  filter:drop-shadow(0 0 .5em rgb(255, 248, 181));
+}
+
+button:active {
+  filter:drop-shadow(0 0 .5em rgb(199, 159, 50));
 }
 
 /* StuurwielAfbeelding */
@@ -106,10 +121,10 @@ button img {
 /* Mickey Afbeelding */
 main section img{
   transform: scaleX(-1);
-  width: 14em;
+  width: 18em;
   position: absolute;
   top: 18em;
-  left: 37em;
+  left: 35.5em;
 }
 
 
@@ -126,8 +141,8 @@ main section:nth-child(3){
   inset -.25em -.25em .25em rgb(46, 29, 0),
   inset .25em .25em .25em rgb(20, 16, 10);
   position: absolute;
-  right: 3.5em;
-  top: 16.5em;
+  right: 2.7em;
+  top: 15em;
 }
 
 
